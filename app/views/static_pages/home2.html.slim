@@ -1,0 +1,112 @@
+
+
+
+div.uk-height-1-1.home_test.uk-cover-background.uk-position-relative
+  div.uk-height-1-1(style="position: absolute; background: rgba(36,119,163,0.6); width: 100%")
+  div
+
+  div.uk-position-cover.uk-text-center
+    h1#title.uk-margin-large-top(style="font-family: 'Josefin Sans', sans-serif; letter-spacing: 0.289474em; font-size: 33px; color: #fbfbfb;")
+      b REINALDO HOFFMAN LANGE
+
+
+
+  div.uk-position-cover.uk-flex.uk-flex-center.uk-flex-middle
+
+        div(style="width: 500px")
+          div#aha
+            p#text(style="font-family: 'Josefin Sans', sans-serif; letter-spacing: 0.1em; font-size: 33px; color: #fbfbfb; padding-bottom: 5px; text-align: center") Manager. Salesman. Coach.
+          div#aha2
+          ul#list(style="list-style-type: none;   margin-left: 80px; margin-top: 20px;")
+            li#but1(style="    cursor: pointer; display: inline-block; display: inline-block; margin-left: 20px; color: #fbfbfb; font-family: 'Josefin Sans', sans-serif;  width: 80px; text-align: center;")
+              a.round2.uk-icon.uk-icon-file(style="color: #fbfbfb; margin-top: 15px")
+            li#but2(style="    cursor: pointer; display: inline-block; display: inline-block; margin-left: 20px; color: #fbfbfb; font-family: 'Josefin Sans', sans-serif;  width: 80px; text-align: center;")
+              a.round2.uk-icon.uk-icon-user(style="color: #fbfbfb; margin-top: 15px")
+
+  / div.uk-grid
+  /   div#aha3.uk-width-1-1(style="margin-top: 20px; background: rgba(0,0,0,0.6); min-height: 100px")
+        / p(style="font-family: 'Josefin Sans', sans-serif; letter-spacing: 0.1em; font-size: 17px; color: #fbfbfb; z-index: 200000") Hello
+
+
+
+  / ul(style="float: left" class="uk-slideshow uk-slideshow-fullscreen" data-uk-slideshow="{autoplay:true, animation: 'fade', kenburns: true, autoplayInterval: 6000, duration: 2000}")
+  /   li = image_tag("desk.jpg", :alt => "rss feed")
+  /   / li = image_tag("https://images.unsplash.com/photo-1441716844725-09cedc13a4e7?q=80&fm=jpg&s=c895a1f219d174952415b9b7a0811e62", :alt => "rss feed")
+  /   / li = image_tag("https://images.unsplash.com/photo-1441742917377-57f78ee0e582?q=80&fm=jpg&s=a79e8a2beba8b3a1ad251798a9024d8b", :alt => "rss feed")
+
+  / div.uk-width-1-1(style="z-index: 10000; position: absolute")
+  /   div.uk-grid.fade-header(style="margin-bottom: 35px")
+  /     div.uk-width-3-5
+  /       h1.top-title.uk-margin-large-top.uk-margin-large-left
+  /         b OLIVER HOFFMAN
+
+  / / div.uk-grid
+  / /   div.uk-width-1-2
+  / /     div.uk-grid
+  / /       div.uk-width-1-2
+  / /         div.uk-grid
+  / /           div.uk-width-1-5
+  / /           div.uk-widht-4-5
+  / /             div.uk-grid
+  / /               div.uk-width-5-6.uk-text-center(style="background: rgba(0,0,0,0.8); padding: 0")
+  / /                 a.uk-width-1-1.uk-margin-top.uk-icon.uk-icon-small.uk-icon-github(style="color: #d5d5d5; font-size: 17px" data-uk-tooltip="{offset:20, animation: true,pos:'right'}" title="Github")
+  / /                 a.uk-width-1-1.uk-margin-top.uk-icon.uk-icon-small.uk-icon-linkedin(style="color: #d5d5d5; font-size: 16px" data-uk-tooltip="{offset:20, animation: true,pos:'right'}" title="Linkedin")
+  / /                 a.uk-width-1-1.uk-margin-top.uk-icon.uk-icon-small.uk-icon-facebook(style="color: #d5d5d5; font-size: 16px" data-uk-tooltip="{offset:20, animation: true,pos:'right'}" title="Facebook")
+  / /                 a.uk-width-1-1.uk-margin-top.uk-margin-bottom.uk-icon.uk-icon-small.uk-icon-download(style="color: #d5d5d5; font-size: 16px" data-uk-tooltip="{offset:20, animation: true,pos:'right'}" title="Download Resume")
+  / / div.uk-margin-large-top.uk-margin-left.uk-text-center.uk-height-1-1(style="width: 80px; background: rgba(0,0,0,0.7);")
+  /   / div.uk-margin-top.uk-icon.uk-icon-small.uk-icon-github(style="color: #fbfbfb")
+  /   / div.uk-margin-top.uk-icon.uk-icon-small.uk-icon-github(style="color: #fbfbfb")
+  /   / div.uk-margin-top.uk-icon.uk-icon-small.uk-icon-github(style="color: #fbfbfb")
+
+  footer#footer.uk-text-center(style="height: 0px")
+    / p.uk-text-center.uk-text-middle.uk-margin-top.content-normal.italify(style="letter-spacing: 2px") Software Engineer | Graduate Student @ Cornell Tech
+    span.round.uk-icon.uk-icon-book(style="color: #fbfbfb; margin-top: 15px")
+    span.round.uk-icon.uk-icon-linkedin.uk-margin-left(style="color: #fbfbfb; margin-top: 15px")
+    span.round.uk-icon.uk-icon-phone.uk-margin-left(style="color: #fbfbfb; margin-top: 15px")
+    span.round.uk-icon.uk-icon-envelope.uk-margin-left(style="color: #fbfbfb; margin-top: 15px")
+    span.round.uk-icon.uk-icon-video-camera.uk-margin-left(style="color: #fbfbfb; margin-top: 15px")
+
+
+
+
+javascript:
+
+  var test = d3.select("#aha")
+
+  test.attr("style", "opacity: 0; " ).transition().delay(650).duration(1200)
+           .attr("style", "opacity: 1; " )
+
+  /*test.attr("style", "margin-top: 0px" ).transition().delay(1600).duration(1500)
+           .attr("style", "margin-top: -250px" )*/
+
+  test = d3.select("#aha2")
+  test.attr("style", "height: 2px; background-color: #fbfbfb; width: 0%" ).transition().delay(1000).duration(1000)
+           .attr("style", "height: 2px; background-color: #fbfbfb; width: 100%" )
+
+  test = d3.select("#list")
+  test.style("opacity", "0" ).transition().delay(1250).duration(1250)
+           .style("opacity", "1" )
+
+  test = d3.select("#title")
+
+  test.style("opacity", "0" ).transition().delay(0).duration(2000)
+           .style("opacity", "1" )
+
+  test = d3.select("#footer")
+
+  test.style("height", "0px" ).transition().delay(1250).duration(1000)
+           .style("height", "60px" )
+
+  /*
+  test = d3.select("#aha3")
+  test.attr("style", "margin-top: 20px; background: rgba(0,0,0,0.6); min-height: 100px; opacity: 0" ).transition().delay(2300).duration(1500).attr("style", "margin-top: 20px; background: rgba(0,0,0,0.6); min-height: 100px; opacity: 1" )
+
+
+  test = d3.select("#aha4")
+  test.attr("style", "color: #f7f7f7; opacity: 0; font-size: 30px" ).transition().delay(1400).duration(1500).attr("style", "color: #f7f7f7; opacity: 1; font-size: 30px" )
+
+  test = d3.select("#aha5")
+  test.attr("style", "color: #f7f7f7; opacity: 0; font-size: 30px" ).transition().delay(1500).duration(1500).attr("style", "color: #f7f7f7; opacity: 1; font-size: 30px" )
+  */
+
+

@@ -5,14 +5,14 @@ div(style="    height: 150px;
   ul( class="uk-slideshow" data-uk-slideshow="{autoplay:true, animation: 'fade', kenburns: true, autoplayInterval: 6000, duration: 2000}")
       / li = image_tag("photonyc.jpeg", :alt => "rss feed")
       / li = image_tag("munich.jpeg", :alt => "rss feed")
-      li = image_tag("https://s3-us-west-2.amazonaws.com/ojh22/test2-result.jpg", :alt => "rss feed")
-      li = image_tag("https://s3-us-west-2.amazonaws.com/ojh22/test3-result.jpg")
+      li = image_tag("https://images.unsplash.com/13/unsplash_523ae1f5502d6_1.JPG?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=8303bca44f6cd3ce0e72326f3cacf3b8", :alt => "rss feed")
+      / li = image_tag("https://s3-us-west-2.amazonaws.com/ojh22/test3-result.jpg")
   div.uk-width-1-1(style="position: absolute;
     top: 0;
     height: 150px;
-    background-color: rgba(0,0,0,0.6);")
+    background-image: image-url('sky.jpeg');")
     h1.top-title.uk-margin-large-top.uk-margin-large-left(style="float: left")
-      b OLIVER HOFFMAN
+      b REINALDO HOFFMAN
 
     = render 'layouts/fade_menu'
 

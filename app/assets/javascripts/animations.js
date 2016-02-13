@@ -261,13 +261,13 @@ function skills2()
 {
 
     var data =[
-          {value: 80, skill: 'Ruby on Rails'},
-          {value: 75, skill: 'Javascript'},
-          {value: 90, skill: 'CSS'},
-          {value: 95, skill: 'HTML'},
-          {value: 80, skill: 'Sass'},
-          {value: 85, skill: 'Slim'},
-          {value: 90, skill: 'UIKit'}
+          {value: 80, skill: 'Self Motivation'},
+          {value: 75, skill: 'Target Driven'},
+          {value: 90, skill: 'Negotiation'},
+          {value: 95, skill: 'Customer Focus'},
+          {value: 80, skill: 'Leadership'},
+          {value: 85, skill: 'Decision Making'},
+          {value: 90, skill: 'Presentation Skills'}
       ];
 
   var w = 440,
