@@ -8,12 +8,16 @@
 /       a.round3.iconic.uk-icon.uk-icon-file(style="margin-top: 15px")
 
 
+
 div.home_test.uk-height-1-1.uk-cover-background.uk-position-relative
   div.uk-text-center(style="position: fixed; width: 40px; height: 100%; background-color: rgba(0,0,0,0.0); padding-right: 5px; padding-left: 6px; z-index: 999; left: 0%")
     / a.uk-icon.uk-icon-home.iconic(style="display: block; margin-top: 20px; font-size: 20px")
     / a.uk-icon.uk-icon-file.iconic(style="display: block; margin-top: 20px; font-size: 18px; padding-bottom: 20px; border-bottom: 1px solid #fbfbfb")
 
-    a.uk-icon.uk-icon-file.iconic(href="/resume" style="display: block; margin-top: 20px; font-size: 20px" data-uk-tooltip="{offset:20, animation: true,pos:'top'}" title="Resume")
+    a.uk-icon.uk-icon-file.iconic(href="/resume" style="display: block; margin-top: 20px; font-size: 20px;" data-uk-tooltip="{offset:20, animation: true,pos:'top'}" title="Resume")
+
+    a#arrowdown.uk-icon.uk-icon-angle-down.iconic(href="#secondPage" style="display: block; margin-top: 20px; font-size: 50px; position: absolute; bottom: 10px; left: 20px;" data-uk-tooltip="{offset:20, animation: true,pos:'top'}" title="Scroll Down" onclick="scrollDown()")
+
 
   div.uk-text-center(style="position: fixed; width: 40px; height: 100%; background-color: rgba(0,0,0,0.0); padding-right: 5px; padding-left: 6px; z-index: 999; left: 96%")
     / a.uk-icon.uk-icon-home.iconic(style="display: block; margin-top: 20px; font-size: 20px")
@@ -24,8 +28,15 @@ div.home_test.uk-height-1-1.uk-cover-background.uk-position-relative
     a.uk-icon.uk-icon-envelope.iconic(style="display: block; margin-top: 20px; font-size: 18px" data-uk-tooltip="{offset:20, animation: true,pos:'top'}" title="reinaldo.hoffman@gmail.com")
     a.uk-icon.uk-icon-book.iconic(style="display: block; margin-top: 20px; font-size: 20px" href="http://www.amazon.es/Yo-estoy-bien-%C2%BFY-t%C3%BA/dp/8460828107/ref=cm_cr_pr_product_top?ie=UTF8" target="_blank" data-uk-tooltip="{offset:20, animation: true,pos:'top'}" title="Published Book")
 
+    a#arrowup.uk-icon.uk-icon-arrow-up.iconic(href="#fourthPage" style="display: none; margin-top: 20px; font-size: 20px; position: absolute; bottom: 40px; right: 15px;" data-uk-tooltip="{offset:20, animation: true,pos:'top'}" title="Scroll Up" onclick="scrollUp()")
+
+
+
   div#fullpage
-    div.section(style="background: rgba(36,119,163,0.5); min-height: 100vh; padding-left: 40px")
+
+
+    div#part1.section(style="background: rgba(36,119,163,0.5); min-height: 100vh; padding-left: 40px")
+
       div#title.uk-margin-left.uk-text-middle()
         ul(style="list-style-type: none; ")
             li#but1(style="display: inline-block; color: #fbfbfb; margin-top: 50px")
@@ -42,7 +53,7 @@ div.home_test.uk-height-1-1.uk-cover-background.uk-position-relative
 
           p.content-normal(style="color:#fbfbfb")  Specialist in market analysis, developing innovative solutions, launch new products as well as in managing campaigns and promotional events. Demonstrated excellent performance in negotiating with suppliers, managing budgets and finding new market opportunities internationally, positioning strategically the company in the market. Proven experience in development and implementation of CRM. Bilingual professional (English-Spanish) with experience in LATAM, USA and Spain.
 
-    div.section(style="background: rgba(0,0,0,0.5); min-height: 100vh; padding-left: 40px; ")
+    div#part2.section(style="background: rgba(0,0,0,0.5); min-height: 100vh; padding-left: 40px; ")
           div#title.uk-margin-left.uk-text-middle()
             ul(style="list-style-type: none; ")
                 li#but1(style="display: inline-block; color: #fbfbfb; margin-top: 50px")
@@ -142,9 +153,55 @@ div.home_test.uk-height-1-1.uk-cover-background.uk-position-relative
 
 
 javascript:
+  var values = {}
+  values[0] = "firstPage"
+  values[1] = "secondPage"
+  values[2] = "thirdPage"
+  values[3] = "fourthPage"
+  max_val = 4;
+  min_val = 0;
+  current = 0;
+  $(window).scroll(function(event){
+        alert("")
+
+      });
+  function scrollUp()
+    {
+      current = current - 1;
+      current = current % max_val;
+      if (current < 0)
+      {
+        $("#arrowup").attr('href',"#"+values[max_val - 1]);
+        current = max_val - 1
+      }
+      else
+      {
+        $("#arrowup").attr('href',"#"+values[current]);
+      }
+
+      $("#arrowdown").attr('href',"#"+values[current]);
+
+
+    }
+  function scrollDown()
+  {
+
+    current = current +1;
+    current = current % max_val;
+    $("#arrowup").attr('href',"#"+values[current-1]);
+    $("#arrowdown").attr('href',"#"+values[current]);
+  }
 
   $(document).ready(function() {
-      $('#fullpage').fullpage();
+      $('#fullpage').fullpage({
+        anchors:['firstPage', 'secondPage', 'thirdPage', 'fourthPage'],
+
+      });
+
+
+
+
+
   });
   /*
   $(window).scroll(function() {

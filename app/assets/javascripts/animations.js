@@ -261,13 +261,13 @@ function skills2()
 {
 
     var data =[
-          {value: 80, skill: 'Self Motivation'},
-          {value: 75, skill: 'Target Driven'},
+          {value: 95, skill: 'Self Motivation'},
+          {value: 100, skill: 'Target Driven'},
           {value: 90, skill: 'Negotiation'},
-          {value: 95, skill: 'Customer Focus'},
-          {value: 80, skill: 'Leadership'},
-          {value: 85, skill: 'Decision Making'},
-          {value: 90, skill: 'Presentation Skills'}
+          {value: 100, skill: 'Customer Focus'},
+          {value: 98, skill: 'Leadership'},
+          {value: 95, skill: 'Decision Making'},
+          {value: 94, skill: 'Presentation Skills'}
       ];
 
   var w = 440,
