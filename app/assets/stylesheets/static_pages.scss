@@ -64,6 +64,7 @@ figcaption.about{
 
 }
 
+
 .photo{
 
   width: 85px;
@@ -475,7 +476,11 @@ h4{
 
         border: 1px solid #fbfbfb;
     }
+.round:hover{
 
+  color: #333 !important;
+  background-color: #fbfbfb;
+}
 
 .round2{
     border-radius: 47px;
